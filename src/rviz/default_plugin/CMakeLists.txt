@@ -87,11 +87,13 @@ set(SOURCE_FILES
   ${MOC_FILES}
 )
 
-add_library(default_plugin ${SOURCE_FILES})
+add_library(default_plugin_core ${SOURCE_FILES})
+add_library(default_plugin plugin_macros.cpp)
                                     
-target_link_libraries(default_plugin ${PROJECT_NAME} ${QT_LIBRARIES} ${OGRE_LIBRARIES} ${Boost_LIBRARIES})
+target_link_libraries(default_plugin_core ${PROJECT_NAME} ${QT_LIBRARIES} ${OGRE_LIBRARIES} ${Boost_LIBRARIES})
+target_link_libraries(default_plugin default_plugin_core)
 
-install(TARGETS default_plugin
+install(TARGETS default_plugin_core default_plugin
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})
 
