@@ -589,11 +589,3 @@ void AxisColorPCTransformer::updateAutoComputeBounds()
 }
 
 } // end namespace rviz
-
-#include <pluginlib/class_list_macros.h>
-PLUGINLIB_DECLARE_CLASS( rviz, AxisColor, rviz::AxisColorPCTransformer, rviz::PointCloudTransformer )
-PLUGINLIB_DECLARE_CLASS( rviz, FlatColor, rviz::FlatColorPCTransformer, rviz::PointCloudTransformer )
-PLUGINLIB_DECLARE_CLASS( rviz, Intensity, rviz::IntensityPCTransformer, rviz::PointCloudTransformer )
-PLUGINLIB_DECLARE_CLASS( rviz, RGB8,      rviz::RGB8PCTransformer,      rviz::PointCloudTransformer )
-PLUGINLIB_DECLARE_CLASS( rviz, RGBF32,    rviz::RGBF32PCTransformer,    rviz::PointCloudTransformer )
-PLUGINLIB_DECLARE_CLASS( rviz, XYZ,       rviz::XYZPCTransformer,       rviz::PointCloudTransformer )
